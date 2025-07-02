@@ -2,124 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>lagiii - Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Irsyad Fauzan - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
   <style>
     body {
-      background: linear-gradient(135deg, #0f0 0%, #000 100%);
-      color: #f0f0f0;
       font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+    .navbar {
+      transition: background-color 0.3s;
+    }
+    .navbar.scrolled {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f0 0%, #000 100%);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      opacity: 0.8;
     }
     .section-title {
       font-weight: bold;
+      font-size: 2rem;
       border-bottom: 2px solid #0f0;
       display: inline-block;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
-    .card {
-      background-color: rgba(0,0,0,0.7);
-      border: none;
+    .card-custom {
+      background-color: rgba(0, 255, 136, 0.1);
+      border: 1px solid #0f0;
       border-radius: 15px;
-      color: #fff;
+      transition: transform 0.3s;
     }
-    .btn-custom {
-      background-color: #00ff88;
+    .card-custom:hover {
+      transform: translateY(-10px);
+    }
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .parallax {
+      background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
+      min-height: 400px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    footer {
+      background-color: #0f0;
       color: #000;
-      border-radius: 30px;
-      font-weight: 600;
-    }
-    .btn-custom:hover {
-      background-color: #00cc66;
-      color: #fff;
-    }
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.85);
-    }
-    .navbar-brand {
-      font-weight: bold;
-      color: #0f0 !important;
-    }
-    a {
-      color: #0f0;
-    }
-    a:hover {
-      color: #00cc66;
+      padding: 2rem 0;
     }
   </style>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Irsyad Fauzan</a>
+    </div>
+  </nav>
 
-<nav class="navbar navbar-expand-lg px-4">
-  <a class="navbar-brand" href="#">Irsyad Fauzan rabbani</a>
-</nav>
+  <header class="hero text-white">
+    <div data-aos="fade-up">
+      <h1>Irsyad Fauzan</h1>
+      <p>Fullstack Web Developer | Crypto Enthusiast | Tech-Driven Entrepreneur</p>
+      <a href="#projects" class="btn btn-success mt-3">Explore Projects</a>
+    </div>
+  </header>
 
-<header class="container py-5 text-center">
-  <h1 class="display-4 fw-bold">Web Developer & Money-Minded Technophile</h1>
-  <p class="lead">Driven by code, crypto, and unlimited opportunities</p>
-  <a href="#projects" class="btn btn-custom mt-3">View My Work</a>
-</header>
+  <section class="container py-5" id="about">
+    <h2 class="section-title" data-aos="fade-right">About Me</h2>
+    <p data-aos="fade-up">I'm a programmer from Tangerang, Indonesia, born in 2002. I write code that works fast. I focus on money-making skills: coding, automation, crypto, and online marketing. I aim to get rich before 25 and build scalable digital businesses with minimal risk. I don't chase perfection, I chase results.</p>
+  </section>
 
-<section class="container my-5" id="about">
-  <h2 class="section-title">About Me</h2>
-  <p>I am a web developer based in Tangerang, Indonesia, born in 2002. I specialize in delivering fast, working code rather than perfect structure. My focus is getting things done and making money through technology, automation, internet marketing, and crypto. My life goal is simple: get rich — and smart — before 25.</p>
-</section>
+  <section class="parallax"></section>
 
-<section class="container my-5" id="skills">
-  <h2 class="section-title">Skills</h2>
-  <ul>
-    <li>HTML, CSS, Bootstrap, Tailwind</li>
-    <li>JavaScript, PHP, Laravel</li>
-    <li>MySQL, PostgreSQL</li>
-    <li>API Integration, Automation</li>
-    <li>Internet Marketing, Crypto Enthusiast</li>
-  </ul>
-</section>
-
-<section class="container my-5" id="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="row g-4">
-    <div class="col-md-4">
-      <div class="card p-3">
-        <h5>Crypto Tracker App</h5>
-        <p>A real-time crypto monitoring app built with Laravel and Bootstrap. Optimized for speed and functionality.</p>
+  <section class="container py-5" id="projects">
+    <h2 class="section-title" data-aos="fade-left">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card card-custom p-3">
+          <h5>Crypto Tracker</h5>
+          <p>Real-time crypto monitoring app built with Laravel & Bootstrap. For fast insights and market moves.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card card-custom p-3">
+          <h5>AI Task Generator</h5>
+          <p>AI-powered app that generates random coding tasks every day for fun and growth. Minimal UI, max output.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card card-custom p-3">
+          <h5>Admin Panel</h5>
+          <p>Secure Laravel admin with JWT, PostgreSQL, and custom analytics dashboard. Lightweight and powerful.</p>
+        </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card p-3">
-        <h5>AI-powered Task Generator</h5>
-        <p>Auto-generates daily programming tasks to level-up coding skill with AI assistance. Built for productivity and laziness.</p>
+  </section>
+
+  <section class="container py-5">
+    <h2 class="section-title" data-aos="fade-right">Gallery</h2>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://source.unsplash.com/800x400/?technology" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Modern Tech</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/800x400/?coding" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Code & Crypto</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/800x400/?startup" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Entrepreneurship</h5>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card p-3">
-        <h5>REST API Admin Panel</h5>
-        <p>Minimalist admin panel for managing business data with JWT auth, MySQL, and Laravel.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="container my-5" id="goals">
-  <h2 class="section-title">Life Goals</h2>
-  <ul>
-    <li>Become rich before 25</li>
-    <li>Build passive income streams</li>
-    <li>Master code, crypto, and business</li>
-    <li>Marry a smart and beautiful Muslim woman</li>
-    <li>Own a lean, athletic body and a disciplined mind</li>
-  </ul>
-</section>
+  <section class="container py-5" id="contact">
+    <h2 class="section-title" data-aos="fade-left">Contact</h2>
+    <p data-aos="fade-up">Email: <a href="mailto:irsyad@example.com">irsyad@example.com</a></p>
+    <p data-aos="fade-up">Telegram / WhatsApp: +62xxxxxxxxxxx</p>
+  </section>
 
-<section class="container my-5 text-center" id="contact">
-  <h2 class="section-title">Contact Me</h2>
-  <p>Email: <a href="mailto:irsyad@example.com">irsyad@example.com</a></p>
-  <p>Telegram/WhatsApp: +62xxxxxxxxxxx</p>
-</section>
+  <footer class="text-center">
+    <p>&copy; 2025 Irsyad Fauzan. All rights reserved.</p>
+  </footer>
 
-<footer class="text-center py-4">
-  <small>&copy; 2025 Irsyad Fauzan. All rights reserved.</small>
-</footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
