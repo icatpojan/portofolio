@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,12 +14,15 @@
       color: #e0ffe0;
       overflow-x: hidden;
     }
+
     .navbar {
       transition: background-color 0.3s;
     }
+
     .navbar.scrolled {
       background-color: rgba(0, 0, 0, 0.85);
     }
+
     .hero {
       background: linear-gradient(135deg, #0f0 0%, #000 100%);
       height: 100vh;
@@ -28,14 +32,17 @@
       text-align: center;
       color: #ffffff;
     }
+
     .hero h1 {
       font-size: 4rem;
       font-weight: bold;
     }
+
     .hero p {
       font-size: 1.5rem;
       opacity: 0.9;
     }
+
     .section-title {
       font-weight: bold;
       font-size: 2rem;
@@ -43,6 +50,7 @@
       display: inline-block;
       margin-bottom: 30px;
     }
+
     .card-custom {
       background-color: rgba(0, 255, 136, 0.08);
       border: 1px solid #0f0;
@@ -50,14 +58,17 @@
       transition: transform 0.3s;
       color: #c0f0c0;
     }
+
     .card-custom:hover {
       transform: translateY(-10px);
     }
+
     .carousel-caption {
       background-color: rgba(0, 0, 0, 0.5);
       padding: 1rem;
       border-radius: 10px;
     }
+
     .parallax {
       background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
       min-height: 400px;
@@ -66,19 +77,23 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+
     footer {
       background-color: #0f0;
       color: #000;
       padding: 2rem 0;
     }
+
     a {
       color: #00ff88;
     }
+
     a:hover {
       color: #00cc66;
     }
   </style>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
     <div class="container">
@@ -88,6 +103,8 @@
 
   <header class="hero text-white">
     <div data-aos="fade-up">
+      <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Irsyad Fauzan" class="rounded-circle mb-4"
+        style="width: 140px; height: 140px; border: 4px solid #0f0; object-fit: cover; background: #fff;">
       <h1>Irsyad Fauzan</h1>
       <p>Fullstack Web Developer | Crypto Enthusiast | Tech-Driven Entrepreneur</p>
       <a href="#projects" class="btn btn-success mt-3">Explore Projects</a>
@@ -96,97 +113,188 @@
 
   <section class="container py-5" id="about">
     <h2 class="section-title" data-aos="fade-right">About Me</h2>
-    <p data-aos="fade-up">I'm a programmer from Tangerang, Indonesia, born in 2002. I write code that works fast. I focus on money-making skills: coding, automation, crypto, and online marketing. I aim to get rich before 25 and build scalable digital businesses with minimal risk. I don't chase perfection, I chase results.</p>
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center" data-aos="fade-up">
+        <img
+          src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&h=400&facepad=2"
+          alt="Profile" class="img-fluid rounded-circle shadow" style="max-width: 180px;">
+      </div>
+      <div class="col-md-8" data-aos="fade-up">
+        <p>Halo! Saya Irsyad, seorang programmer dari Tangerang, Indonesia, lahir tahun 2002. Saya fokus pada
+          pengembangan web fullstack, automasi, dan integrasi sistem. Passion saya adalah membangun solusi digital yang
+          efisien dan scalable, terutama di bidang bisnis dan teknologi finansial. Saya percaya hasil lebih penting dari
+          sekadar kesempurnaan. Target saya: sukses finansial sebelum usia 25 dan membangun bisnis digital minim risiko.
+        </p>
+        <ul>
+          <li>Berpengalaman di berbagai stack: PHP, JS, Node.js, Laravel, REST API, dsb.</li>
+          <li>Terbiasa dengan project berbasis tim maupun individu.</li>
+          <li>Selalu belajar teknologi baru dan siap beradaptasi.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section class="container py-5" id="skills">
     <h2 class="section-title" data-aos="fade-right">Skills</h2>
-    <ul class="row list-unstyled" data-aos="fade-up">
-      <li class="col-md-4">PHP & MySQL</li>
-      <li class="col-md-4">JavaScript (Vanilla, DOM)</li>
-      <li class="col-md-4">PostgreSQL & MongoDB</li>
-      <li class="col-md-4">Node.js & Express.js</li>
-      <li class="col-md-4">Laravel & CodeIgniter</li>
-      <li class="col-md-4">REST API & System Integration</li>
-    </ul>
+    <div class="row" data-aos="fade-up">
+      <div class="col-md-2 col-4 text-center mb-4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
+          style="width:40px;">
+        <div>PHP & MySQL</div>
+      </div>
+      <div class="col-md-2 col-4 text-center mb-4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript" style="width:40px;">
+        <div>JavaScript</div>
+      </div>
+      <div class="col-md-2 col-4 text-center mb-4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+          alt="PostgreSQL" style="width:40px;">
+        <div>PostgreSQL & MongoDB</div>
+      </div>
+      <div class="col-md-2 col-4 text-center mb-4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+          style="width:40px;">
+        <div>Node.js & Express.js</div>
+      </div>
+      <div class="col-md-2 col-4 text-center mb-4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel"
+          style="width:40px;">
+        <div>Laravel & CodeIgniter</div>
+      </div>
+      <div class="col-md-2 col-4 text-center mb-4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/api/api-original-wordmark.svg" alt="API"
+          style="width:40px;">
+        <div>REST API & Integration</div>
+      </div>
+    </div>
   </section>
 
-  <section class="parallax"></section>
+  <section class="parallax"
+    style="background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80');">
+  </section>
 
   <section class="container py-5" id="projects">
     <h2 class="section-title" data-aos="fade-left">Projects</h2>
     <div class="row g-4">
       <div class="col-md-4" data-aos="zoom-in">
-        <div class="card card-custom p-3">
+        <div class="card card-custom p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top mb-3 rounded" alt="JID Map">
           <h5>JID - Jasa Marga Integrated Digital Map</h5>
-          <p>Advanced mapping and monitoring platform integrated with real-time traffic data and infrastructure analytics.</p>
+          <p>Platform pemetaan & monitoring terintegrasi data lalu lintas real-time dan analitik infrastruktur.</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card card-custom p-3">
+        <div class="card card-custom p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top mb-3 rounded" alt="Kapal Pintar">
           <h5>Kapal Pintar Office Management</h5>
-          <p>Internal management system for ship operations, logistics, and document handling for Kapal Pintar.</p>
+          <p>Sistem manajemen internal untuk operasi kapal, logistik, dan dokumen Kapal Pintar.</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="card card-custom p-3">
+        <div class="card card-custom p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top mb-3 rounded" alt="Monitoring Kapal">
           <h5>Monitoring Kapal</h5>
-          <p>Real-time ship tracking dashboard with alerts and historical routes using GPS and maritime APIs.</p>
+          <p>Dashboard pelacakan kapal real-time dengan notifikasi & histori rute berbasis GPS dan API maritim.</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="zoom-in">
-        <div class="card card-custom p-3">
+        <div class="card card-custom p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top mb-3 rounded" alt="Salon POS">
           <h5>Mumtaza Salon POS</h5>
-          <p>Point of sale system for salon services, appointment booking, and product sales with daily reporting.</p>
+          <p>Sistem kasir salon, booking layanan, penjualan produk, dan laporan harian.</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card card-custom p-3">
+        <div class="card card-custom p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top mb-3 rounded" alt="Gold Store POS">
           <h5>Dinar Gold Store POS</h5>
-          <p>Cashier and inventory system for a gold jewelry store. Tracks pricing, weight, and stock across branches.</p>
+          <p>Sistem kasir & stok toko emas. Pantau harga, berat, dan stok antar cabang.</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="card card-custom p-3">
+        <div class="card card-custom p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top mb-3 rounded" alt="Nusa Penida">
           <h5>Nusa Penida Tourist Management</h5>
-          <p>Web-based platform for booking, managing tours, and guide operations in Nusa Penida island.</p>
+          <p>Platform web booking, manajemen tur, dan operasional guide di Nusa Penida.</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="zoom-in">
-        <div class="card card-custom p-3">
+        <div class="card card-custom p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top mb-3 rounded" alt="API Management">
           <h5>API & Database Management</h5>
-          <p>Robust REST APIs and database handling for data-driven apps. CRUD, security, versioning & docs.</p>
+          <p>REST API & manajemen database untuk aplikasi data-driven. CRUD, security, versioning & docs.</p>
         </div>
       </div>
-       <div class="col-md-4" data-aos="zoom-in">
-        <div class="card card-custom p-3">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card card-custom p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top mb-3 rounded" alt="KKP Transmitter">
           <h5>Send Data Transmitter to KKP</h5>
-          <p>System to transmit vessel data directly to the Ministry of Marine Affairs and Fisheries (KKP) for real-time reporting and compliance.</p>
+          <p>Sistem pengiriman data kapal ke KKP untuk pelaporan real-time & compliance.</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card card-custom p-3">
+        <div class="card card-custom p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top mb-3 rounded" alt="WhatsApp API">
           <h5>WhatsApp API Integration</h5>
-          <p>Integrated WhatsApp API for sending automated messages, OTPs, notifications, and chatbot interactions using Node.js and Express.</p>
+          <p>Integrasi WhatsApp API untuk pesan otomatis, OTP, notifikasi, dan chatbot (Node.js & Express).</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="card card-custom p-3">
+        <div class="card card-custom p-3 h-100">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top mb-3 rounded" alt="Road Issue App">
           <h5>Road Issue Reporting App</h5>
-          <p>Public platform for users to report road damages, traffic disruptions, and hazards directly to the local government via web and mobile.</p>
+          <p>Platform publik pelaporan kerusakan jalan, gangguan lalu lintas, dan bahaya ke pemerintah lokal.</p>
         </div>
+      </div>
     </div>
   </section>
 
   <section class="container py-5" id="contact">
-  <h2 class="section-title" data-aos="fade-left">Contact</h2>
-  <p data-aos="fade-up">Email: <a href="mailto:irsyad@example.com">irsyad@example.com</a></p>
-<p data-aos="fade-up">Telegram / WhatsApp: <a href="https://t.me/icatpojan" target="_blank">@icatpojan</a></p>
-  <p data-aos="fade-up">Phone: <a href="tel:+6285600267104">0856-0026-7104</a></p>
-  <p data-aos="fade-up">GitHub: <a href="https://github.com/icatpojan" target="_blank">github.com/icatpojan</a></p>
-  <p data-aos="fade-up">LinkedIn: <a href="https://www.linkedin.com/in/irsyad-fauzan-rabbani/" target="_blank">linkedin.com/in/irsyad-fauzan-rabbani</a></p>
-</section>
-
+    <h2 class="section-title" data-aos="fade-left">Contact</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card p-4 shadow-sm border-0" style="background:rgba(0,255,136,0.08);">
+          <div class="d-flex flex-wrap gap-3 justify-content-center mb-3">
+            <a href="mailto:irsyad@example.com" class="btn btn-outline-success d-flex align-items-center"
+              target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg"
+                style="width:22px;margin-right:8px;"> Email</a>
+            <a href="https://t.me/icatpojan" class="btn btn-outline-primary d-flex align-items-center"
+              target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/telegram.svg"
+                style="width:22px;margin-right:8px;"> Telegram</a>
+            <a href="https://wa.me/6285600267104" class="btn btn-outline-success d-flex align-items-center"
+              target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                style="width:22px;margin-right:8px;"> WhatsApp</a>
+            <a href="https://github.com/icatpojan" class="btn btn-outline-dark d-flex align-items-center"
+              target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg"
+                style="width:22px;margin-right:8px;"> GitHub</a>
+            <a href="https://www.linkedin.com/in/irsyad-fauzan-rabbani/"
+              class="btn btn-outline-info d-flex align-items-center" target="_blank"><img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+                style="width:22px;margin-right:8px;"> LinkedIn</a>
+          </div>
+          <form>
+            <div class="mb-3">
+              <label for="message" class="form-label">Kirim Pesan Langsung</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Tulis pesanmu di sini..."
+                disabled></textarea>
+              <div class="form-text">(Fitur form belum aktif, silakan gunakan tombol kontak di atas)</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="text-center">
     <p>&copy; 2025 Irsyad Fauzan. All rights reserved.</p>
@@ -196,7 +304,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init();
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       const navbar = document.querySelector('.navbar');
       if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
@@ -206,4 +314,5 @@
     });
   </script>
 </body>
+
 </html>
