@@ -108,18 +108,23 @@
     .btn-custom {
       background: linear-gradient(90deg, #b3d8fd 0%, #6db3f2 100%);
       color: #1a2a4f;
-      border: none;
+      border: 1.5px solid #b3d8fd;
       font-weight: 600;
-      border-radius: 32px;
-      padding: 0.7rem 1.7rem;
-      box-shadow: 0 2px 8px rgba(58, 123, 213, 0.10);
-      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+      border-radius: 12px;
+      padding: 0.65rem 1.4rem;
+      box-shadow: 0 2px 8px rgba(58, 123, 213, 0.08);
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, border 0.3s;
       letter-spacing: 0.5px;
+      margin: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .btn-custom:hover {
       background: linear-gradient(90deg, #6db3f2 0%, #b3d8fd 100%);
       color: #1e69de;
+      border: 1.5px solid #6db3f2;
       box-shadow: 0 4px 16px rgba(58, 123, 213, 0.13);
     }
 
@@ -205,8 +210,6 @@
         <div>Node.js & Express.js</div>
       </div>
       <div class="col-md-2 col-4 text-center mb-4" data-aos="flip-left" data-aos-delay="400">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel"
-          class="icon-skill">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg"
           alt="CodeIgniter" class="icon-skill" style="margin-left:8px;">
         <div>Laravel & CodeIgniter</div>
