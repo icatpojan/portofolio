@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Irsyad Fauzan - Cinematic Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Outfit:wght@300;400;600;700;900&display=swap"
+    rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -31,7 +34,6 @@
       scroll-behavior: smooth;
     }
 
-    /* Floating Particles Background */
     #particles-canvas {
       position: fixed;
       top: 0;
@@ -42,7 +44,6 @@
       pointer-events: none;
     }
 
-    /* Glassmorphism Navigation */
     .navbar {
       position: fixed;
       top: 0;
@@ -108,7 +109,6 @@
       width: 100%;
     }
 
-    /* Hero Section with Typing Animation */
     .hero {
       position: relative;
       height: 100vh;
@@ -140,8 +140,15 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
     }
 
     .hero h1 {
@@ -173,19 +180,24 @@
     }
 
     @keyframes blink {
-      0%, 49% { opacity: 1; }
-      50%, 100% { opacity: 0; }
+
+      0%,
+      49% {
+        opacity: 1;
+      }
+
+      50%,
+      100% {
+        opacity: 0;
+      }
     }
 
-    /* Skills Grid */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 1.5rem;
-      margin: 3rem 0;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1rem;
+      margin: 3rem auto;
+      max-width: 1000px;
     }
 
     .skill-item {
@@ -193,10 +205,11 @@
       backdrop-filter: blur(10px);
       border: 1px solid var(--glass-border);
       border-radius: 15px;
-      padding: 1.5rem;
+      padding: 1.2rem 0.8rem;
       text-align: center;
       transition: all 0.3s ease;
       cursor: pointer;
+      font-size: 0.9rem;
     }
 
     .skill-item:hover {
@@ -204,13 +217,6 @@
       background: rgba(102, 126, 234, 0.1);
       border-color: var(--accent-color);
       box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-    }
-
-    .skill-item img {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 0.5rem;
-      filter: drop-shadow(0 4px 8px rgba(102, 126, 234, 0.3));
     }
 
     .cta-button {
@@ -232,7 +238,6 @@
       box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
     }
 
-    /* Parallax Section */
     .parallax-section {
       position: relative;
       height: 60vh;
@@ -269,7 +274,6 @@
       text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    /* About Section */
     .about-section {
       position: relative;
       padding: 8rem 5%;
@@ -326,7 +330,6 @@
       font-size: 1.5rem;
     }
 
-    /* Horizontal Scroll Bridge */
     .horizontal-scroll-container {
       position: relative;
       height: 100vh;
@@ -361,6 +364,7 @@
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     .scroll-card:hover {
@@ -389,7 +393,6 @@
       line-height: 1.6;
     }
 
-    /* Projects Grid */
     .projects-section {
       position: relative;
       padding: 8rem 5%;
@@ -448,7 +451,131 @@
       line-height: 1.6;
     }
 
-    /* Contact Section */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+      overflow-y: auto;
+    }
+
+    .modal-content {
+      background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(10, 10, 10, 0.95) 100%);
+      margin: 3% auto;
+      padding: 0;
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      width: 90%;
+      max-width: 900px;
+      position: relative;
+      animation: modalSlideIn 0.4s ease;
+    }
+
+    @keyframes modalSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-header {
+      padding: 2rem;
+      border-bottom: 1px solid var(--glass-border);
+      position: relative;
+    }
+
+    .modal-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-body {
+      padding: 2rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .modal-body h3 {
+      color: var(--text-light);
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .modal-body ul {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    .modal-body li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-body li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+
+    .tech-badge {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    .close {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      color: var(--text-muted);
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--glass-bg);
+    }
+
+    .close:hover {
+      color: var(--text-light);
+      background: var(--accent-color);
+      transform: rotate(90deg);
+    }
+
     .contact-section {
       position: relative;
       padding: 8rem 5%;
@@ -494,7 +621,6 @@
       filter: invert(1);
     }
 
-    /* Footer */
     footer {
       position: relative;
       padding: 3rem 5%;
@@ -507,7 +633,6 @@
       color: var(--text-muted);
     }
 
-    /* Mobile Menu */
     .mobile-menu-toggle {
       display: none;
       flex-direction: column;
@@ -523,7 +648,6 @@
       transition: all 0.3s ease;
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -549,16 +673,12 @@
 
       .skills-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        gap: 0.8rem;
       }
 
       .skill-item {
-        padding: 1rem;
-      }
-
-      .skill-item img {
-        width: 35px;
-        height: 35px;
+        padding: 0.8rem 0.5rem;
+        font-size: 0.75rem;
       }
 
       .scroll-card {
@@ -573,9 +693,21 @@
       .horizontal-scroll-content {
         gap: 1.5rem;
       }
+
+      .modal-content {
+        width: 95%;
+        margin: 10% auto;
+      }
+
+      .modal-header h2 {
+        font-size: 1.5rem;
+      }
+
+      .modal-body {
+        padding: 1.5rem;
+      }
     }
 
-    /* Scroll Animations */
     .fade-in {
       opacity: 0;
       transform: translateY(50px);
@@ -610,11 +742,10 @@
     }
   </style>
 </head>
+
 <body>
-  <!-- Floating Particles Canvas -->
   <canvas id="particles-canvas"></canvas>
 
-  <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-content">
       <div class="logo">IRSYAD</div>
@@ -632,48 +763,37 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
+  <section class="hero" id="home" style="margin-top: 105px;">
     <div class="hero-content">
       <img src="./foto-baru.jpeg" alt="Irsyad Fauzan" class="profile-img">
       <h1>Irsyad Fauzan</h1>
       <div class="typing-text">
         <span id="typed-text"></span><span class="typing-cursor"></span>
       </div>
-      
-      <!-- Skills Grid -->
+
       <div class="skills-grid">
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
-          <div>PHP</div>
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-          <div>JavaScript</div>
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
-          <div>Node.js</div>
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel">
-          <div>Laravel</div>
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
-          <div>PostgreSQL</div>
-        </div>
-        <div class="skill-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-          <div>Docker</div>
-        </div>
+        <div class="skill-item">PHP</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">Python</div>
+        <div class="skill-item">Node.js</div>
+        <div class="skill-item">Laravel</div>
+        <div class="skill-item">CodeIgniter</div>
+        <div class="skill-item">Express.js</div>
+        <div class="skill-item">AdonisJS</div>
+        <div class="skill-item">React</div>
+        <div class="skill-item">Next.js</div>
+        <div class="skill-item">Vue.js</div>
+        <div class="skill-item">PostgreSQL</div>
+        <div class="skill-item">MongoDB</div>
+        <div class="skill-item">Mysql</div>
+        <div class="skill-item">Git</div>
+        <div class="skill-item">Docker</div>
       </div>
 
-      <a href="#projects" class="cta-button">View My Work</a>
+      <!-- <a href="#projects" class="cta-button">View My Work</a> -->
     </div>
   </section>
 
-  <!-- Parallax Section -->
   <div class="parallax-section">
     <div class="parallax-bg" id="parallaxBg"></div>
     <div class="parallax-content">
@@ -681,13 +801,14 @@
     </div>
   </div>
 
-  <!-- About Section -->
   <section class="about-section fade-in" id="about">
     <h2 class="section-title">About Me</h2>
     <div class="about-content">
-      <p>I'm a passionate fullstack developer with a strong background in building scalable, high-performance web applications and APIs. My expertise covers backend, frontend, and system integration, with a focus on clean architecture, automation, and security.</p>
+      <p>I'm a passionate fullstack developer with a strong background in building scalable, high-performance web
+        applications and APIs. My expertise covers backend, frontend, and system integration, with a focus on clean
+        architecture, automation, and security.</p>
       <ul>
-        <li>Deep experience in PHP, Node.js, JavaScript, and modern frameworks</li>
+        <li>Deep experience in PHP, Node.js, JavaScript, Python and modern frameworks</li>
         <li>Advanced API design, system integration, and database engineering</li>
         <li>Strong focus on code quality, testing, and DevOps best practices</li>
         <li>Proven track record in leading and delivering mission-critical projects</li>
@@ -695,32 +816,31 @@
     </div>
   </section>
 
-  <!-- Horizontal Scroll Bridge -->
   <div class="horizontal-scroll-container" id="horizontalScrollContainer">
     <div class="horizontal-scroll-wrapper">
       <div class="horizontal-scroll-content" id="horizontalScrollContent">
-        <div class="scroll-card">
+        <div class="scroll-card" onclick="openModal('jid')">
           <div>
             <img src="./jasamarga.png" alt="JID Map">
             <h3>JID - Jasa Marga Integrated Digital Map</h3>
             <p>Platform pemetaan & monitoring terintegrasi data lalu lintas real-time dan analitik infrastruktur.</p>
           </div>
         </div>
-        <div class="scroll-card">
+        <div class="scroll-card" onclick="openModal('kapal')">
           <div>
             <img src="./kapal-pintar.png" alt="Kapal Pintar">
             <h3>Kapal Pintar Office Management</h3>
             <p>Sistem manajemen internal untuk operasi kapal, logistik, dan dokumen Kapal Pintar.</p>
           </div>
         </div>
-        <div class="scroll-card">
+        <div class="scroll-card" onclick="openModal('mumtaza')">
           <div>
             <img src="./pos-mumtaza.png" alt="Salon POS">
             <h3>Mumtaza Salon POS</h3>
             <p>Sistem kasir salon, booking layanan, penjualan produk, dan laporan harian.</p>
           </div>
         </div>
-        <div class="scroll-card">
+        <div class="scroll-card" onclick="openModal('gold')">
           <div>
             <img src="./gold-pos.png" alt="Gold Store POS">
             <h3>Dinar Gold Store POS</h3>
@@ -731,68 +851,72 @@
     </div>
   </div>
 
-  <!-- Projects Section -->
   <section class="projects-section fade-in" id="projects">
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
-      <div class="project-card slide-in-left">
+      <div class="project-card slide-in-left" onclick="openModal('jid')">
         <img src="./jasamarga.png" alt="JID Map">
         <div class="project-info">
           <h3>JID - Jasa Marga Digital Map</h3>
           <p>Platform pemetaan & monitoring terintegrasi data lalu lintas real-time dan analitik infrastruktur.</p>
         </div>
       </div>
-      <div class="project-card fade-in">
+      <div class="project-card fade-in" onclick="openModal('kapal')">
         <img src="./kapal-pintar.png" alt="Kapal Pintar">
         <div class="project-info">
           <h3>Kapal Pintar Office Management</h3>
           <p>Sistem manajemen internal untuk operasi kapal, logistik, dan dokumen Kapal Pintar.</p>
         </div>
       </div>
-      <div class="project-card slide-in-right">
+      <div class="project-card slide-in-right" onclick="openModal('mumtaza')">
         <img src="./pos-mumtaza.png" alt="Salon POS">
         <div class="project-info">
           <h3>Mumtaza Salon POS</h3>
           <p>Sistem kasir salon, booking layanan, penjualan produk, dan laporan harian.</p>
         </div>
       </div>
-      <div class="project-card slide-in-left">
+      <div class="project-card slide-in-left" onclick="openModal('gold')">
         <img src="./gold-pos.png" alt="Gold Store POS">
         <div class="project-info">
           <h3>Dinar Gold Store POS</h3>
           <p>Sistem kasir & stok toko emas. Pantau harga, berat, dan stok antar cabang.</p>
         </div>
       </div>
-      <div class="project-card fade-in">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Nusa Penida">
+      <div class="project-card fade-in" onclick="openModal('nusapenida')">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80"
+          alt="Nusa Penida">
         <div class="project-info">
           <h3>Nusa Penida Tourist Management</h3>
           <p>Platform web booking, manajemen tur, dan operasional guide di Nusa Penida.</p>
         </div>
       </div>
-      <div class="project-card slide-in-right">
-        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="API Management">
+      <div class="project-card slide-in-right" onclick="openModal('api')">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+          alt="API Management">
         <div class="project-info">
           <h3>API & Database Management</h3>
           <p>REST API & manajemen database untuk aplikasi data-driven. CRUD, security, versioning & docs.</p>
         </div>
       </div>
-      <div class="project-card slide-in-left">
-        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="KKP Transmitter">
+      <div class="project-card slide-in-left" onclick="openModal('kkp')">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+          alt="KKP Transmitter">
         <div class="project-info">
           <h3>Send Data Transmitter to KKP</h3>
           <p>Sistem pengiriman data kapal ke KKP untuk pelaporan real-time & compliance.</p>
         </div>
       </div>
-      <div class="project-card fade-in">
-        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="WhatsApp API">
+      <div class="project-card fade-in" onclick="openModal('whatsapp')">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+          alt="WhatsApp API">
         <div class="project-info">
           <h3>WhatsApp API Integration</h3>
           <p>Integrasi WhatsApp API untuk pesan otomatis, OTP, notifikasi, dan chatbot (Node.js & Express).</p>
         </div>
       </div>
-      <div class="project-card slide-in-right">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Road Issue App">
+      <div class="project-card slide-in-right" onclick="openModal('roadissue')">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+          alt="Road Issue App">
         <div class="project-info">
           <h3>Road Issue Reporting App</h3>
           <p>Platform publik pelaporan kerusakan jalan, gangguan lalu lintas, dan bahaya ke pemerintah lokal.</p>
@@ -801,7 +925,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section class="contact-section fade-in" id="contact">
     <h2 class="section-title">Let's Connect</h2>
     <div class="contact-grid">
@@ -828,198 +951,21 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Irsyad Fauzan. All rights reserved. Built with passion and code.</p>
   </footer>
 
-  <script>
-    // Floating Particles Animation
-    const canvas = document.getElementById('particles-canvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
 
-    const particles = [];
-    const particleCount = 80;
-
-    class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 3 + 1;
-        this.speedX = Math.random() * 1 - 0.5;
-        this.speedY = Math.random() * 1 - 0.5;
-        this.opacity = Math.random() * 0.5 + 0.2;
-      }
-
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        if (this.x > canvas.width) this.x = 0;
-        if (this.x < 0) this.x = canvas.width;
-        if (this.y > canvas.height) this.y = 0;
-        if (this.y < 0) this.y = canvas.height;
-      }
-
-      draw() {
-        ctx.fillStyle = `rgba(102, 126, 234, ${this.opacity})`;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
-    function initParticles() {
-      for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-      }
-    }
-
-    function animateParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
-      });
-      requestAnimationFrame(animateParticles);
-    }
-
-    initParticles();
-    animateParticles();
-
-    window.addEventListener('resize', () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    });
-
-    // Typing Animation
-    const typingTexts = [
-      'Fullstack Web Developer',
-      'System Architect',
-      'API Specialist',
-      'Database Engineer',
-      'DevOps Enthusiast'
-    ];
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    const typedTextElement = document.getElementById('typed-text');
-
-    function typeText() {
-      const currentText = typingTexts[textIndex];
-      
-      if (isDeleting) {
-        typedTextElement.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-      } else {
-        typedTextElement.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-      }
-
-      let typeSpeed = isDeleting ? 50 : 100;
-
-      if (!isDeleting && charIndex === currentText.length) {
-        typeSpeed = 2000;
-        isDeleting = true;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % typingTexts.length;
-        typeSpeed = 500;
-      }
-
-      setTimeout(typeText, typeSpeed);
-    }
-
-    typeText();
-
-    // Navbar Scroll Effect
-    window.addEventListener('scroll', () => {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-
-    // Parallax Effect
-    window.addEventListener('scroll', () => {
-      const parallaxBg = document.getElementById('parallaxBg');
-      const scrolled = window.pageYOffset;
-      const parallaxSection = document.querySelector('.parallax-section');
-      const sectionTop = parallaxSection.offsetTop;
-      const sectionHeight = parallaxSection.offsetHeight;
-      
-      if (scrolled > sectionTop - window.innerHeight && scrolled < sectionTop + sectionHeight) {
-        const offset = (scrolled - sectionTop) * 0.5;
-        parallaxBg.style.transform = `translateY(${offset}px)`;
-        
-        const blurAmount = Math.min((scrolled - sectionTop) / 200, 8);
-        parallaxBg.style.filter = `blur(${blurAmount}px)`;
-      }
-    });
-
-    // Horizontal Scroll Bridge
-    const horizontalScrollContainer = document.getElementById('horizontalScrollContainer');
-    const horizontalScrollContent = document.getElementById('horizontalScrollContent');
-
-    window.addEventListener('scroll', () => {
-      const containerRect = horizontalScrollContainer.getBoundingClientRect();
-      const containerTop = containerRect.top;
-      const containerHeight = containerRect.height;
-      
-      if (containerTop <= 0 && containerTop > -containerHeight) {
-        const scrollProgress = Math.abs(containerTop) / containerHeight;
-        const maxScroll = horizontalScrollContent.scrollWidth - window.innerWidth;
-        const scrollAmount = scrollProgress * maxScroll;
-        horizontalScrollContent.style.transform = `translateX(-${scrollAmount}px)`;
-      }
-    });
-
-    // Scroll Animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Mobile Menu Toggle
-    function toggleMobileMenu() {
-      const navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('active');
-    }
-
-    function closeMobileMenu() {
-      const navLinks = document.getElementById('navLinks');
-      navLinks.classList.remove('active');
-    }
-
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
+
 </html>
